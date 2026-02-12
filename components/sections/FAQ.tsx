@@ -28,7 +28,7 @@ export default function FAQ() {
 
       {/* Honeycomb pattern */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.02]"
+        className="absolute inset-0 w-full h-full opacity-[0.3]"
         width="100%"
         height="100%"
       >

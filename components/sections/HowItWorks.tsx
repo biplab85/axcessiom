@@ -45,7 +45,7 @@ export default function HowItWorks() {
 
         <div className="relative">
           {/* Connecting line — desktop */}
-          <div className="hidden lg:block absolute top-16 left-[16.67%] right-[16.67%] h-0.5 bg-white/[0.06]">
+          <div className="w-[70%] m-auto lineBar hidden lg:block absolute top-16 left-[8%] right-[8%] h-0.5 bg-white/[0.06] z-0">
             <motion.div
               className="h-full bg-gradient-to-r from-brand-orange via-accent-amber to-accent-emerald rounded-full"
               initial={{ width: "0%" }}
@@ -55,7 +55,7 @@ export default function HowItWorks() {
             />
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-8">
+          <div className="relative z-10 grid lg:grid-cols-3 gap-12 lg:gap-8">
             {howItWorksContent.steps.map((step, i) => {
               const Icon = icons[i];
               const color = stepColors[i];
@@ -66,7 +66,7 @@ export default function HowItWorks() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.2 }}
-                  className="text-center"
+                  className="text-center iconContainer"
                 >
                   {/* Step circle */}
                   <div className="relative inline-flex items-center justify-center w-32 h-32 mb-8">

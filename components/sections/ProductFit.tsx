@@ -24,7 +24,7 @@ export default function ProductFit() {
 
       {/* Diagonal lines pattern */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.02] hidden lg:block"
+        className="absolute inset-0 w-full h-full opacity-[0.3] hidden lg:block"
         width="100%"
         height="100%"
       >

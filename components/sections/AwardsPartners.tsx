@@ -28,7 +28,7 @@ export default function AwardsPartners() {
 
       {/* Decorative grid dots */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.03] hidden lg:block"
+        className="absolute inset-0 w-full h-full opacity-[0.4] hidden lg:block"
         width="100%"
         height="100%"
       >

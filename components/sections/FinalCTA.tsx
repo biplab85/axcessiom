@@ -22,7 +22,7 @@ export default function FinalCTA() {
 
       {/* Converging lines SVG */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.04] hidden lg:block"
+        className="absolute inset-0 w-full h-full opacity-[0.2] hidden lg:block"
         viewBox="0 0 1200 600"
         preserveAspectRatio="xMidYMid slice"
       >

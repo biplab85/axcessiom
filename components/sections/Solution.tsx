@@ -37,7 +37,7 @@ export default function Solution() {
 
       {/* Mesh SVG */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.06] hidden lg:block"
+        className="absolute inset-0 w-full h-full opacity-[0.2] hidden lg:block"
         viewBox="0 0 1200 450"
         preserveAspectRatio="xMidYMid slice"
       >

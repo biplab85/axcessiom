@@ -2,8 +2,13 @@
 export const navContent = {
   logo: { src: "/logo.png", alt: "Axcessiom" },
   links: [
-    { label: "How It Works", href: "#how-it-works" },
+    { label: "Problem", href: "#problem" },
+    { label: "Solution", href: "#solution" },
+    { label: "Product Fit", href: "#product-fit" },
     { label: "Benefits", href: "#benefits" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Awards", href: "#awards" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "FAQ", href: "#faq" },
   ],
   cta: { label: "Request a Demo", href: "#contact" },

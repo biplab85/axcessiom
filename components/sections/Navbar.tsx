@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { navContent } from "@/lib/content";
 import { useScrolled } from "@/lib/hooks";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MonitorPlay } from "lucide-react";
 
 export default function Navbar() {
   const scrolled = useScrolled(20);
@@ -77,7 +77,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-1 relative">
+        <div className="hidden lg:flex items-center gap-0.5 relative">
           {/* Sliding indicator */}
           <motion.div
             className="absolute bottom-0 h-0.5 bg-brand-orange rounded-full"
@@ -92,7 +92,7 @@ export default function Navbar() {
               }}
               href={link.href}
               onClick={() => setActiveLink(i)}
-              className={`px-4 py-2 text-sm font-medium transition-colors duration-300 ${
+              className={`px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors duration-300 ${
                 activeLink === i
                   ? "text-white"
                   : "text-gray-400 hover:text-white"
@@ -106,15 +106,16 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <a
           href={navContent.cta.href}
-          className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-brand-orange to-brand-orange-light rounded-xl hover:shadow-lg hover:shadow-brand-orange/25 transition-all duration-300 hover:-translate-y-0.5"
+          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-brand-orange to-brand-orange-light rounded-xl hover:shadow-lg hover:shadow-brand-orange/25 transition-all duration-300 hover:-translate-y-0.5"
         >
+          <MonitorPlay size={16} />
           {navContent.cta.label}
         </a>
 
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden relative z-10 p-2 text-white"
+          className="lg:hidden relative z-10 p-2 text-white"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -129,7 +130,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-dark/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-40 bg-dark/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navContent.links.map((link, i) => (

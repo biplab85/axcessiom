@@ -13,6 +13,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="testimonials"
       ref={sectionRef}
       className="relative py-24 lg:py-32 overflow-hidden"
     >
@@ -20,7 +21,7 @@ export default function Testimonials() {
 
       {/* Starburst SVG */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-[0.03] hidden lg:block"
+        className="absolute inset-0 w-full h-full opacity-[0.5] hidden lg:block"
         viewBox="0 0 1200 800"
       >
         {Array.from({ length: 24 }).map((_, i) => {
