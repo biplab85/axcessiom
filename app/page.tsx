@@ -8,6 +8,8 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import AwardsPartners from "@/components/sections/AwardsPartners";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
+import Team from "@/components/sections/Team";
+import Contact from "@/components/sections/Contact";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 
@@ -25,6 +27,8 @@ export default function Home() {
         <AwardsPartners />
         <Testimonials />
         <FAQ />
+        <Team />
+        <Contact />
         <FinalCTA />
       </main>
       <Footer />

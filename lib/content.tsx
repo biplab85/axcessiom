@@ -10,6 +10,8 @@ export const navContent = {
     { label: "Awards", href: "#awards" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "FAQ", href: "#faq" },
+    { label: "Team", href: "#team" },
+    { label: "Contact", href: "#contact" },
   ],
   cta: { label: "Request a Demo", href: "#contact" },
 };
@@ -327,6 +329,90 @@ export const ctaContent = {
   ],
 };
 
+// ── Our Team Section ────────────────────────────
+export const teamContent = {
+  label: "Who We Are",
+  headline: "The People Behind Axcessiom",
+  subheadline:
+    "A passionate team of engineers, designers, and accessibility advocates building the future of adaptive driving technology.",
+  team: [
+    {
+      name: "Shanjay Kailayanathan",
+      role: "Founder, Product Developer",
+      image: "/images/team/shanjay.png",
+      bio: "Shanjay founded Axcessiom in 2018 to help drivers with disabilities gain greater independence by offering innovative and adaptive safety technology solutions. He received a Bachelor of Engineering in Software Engineering from Ontario Tech University. Shanjay is passionate about making a difference and bettering the lives of those around him.",
+    },
+  ],
+  advisors: [
+    {
+      name: "Lorraine Sunstrum-Mann",
+      role: "Advisor",
+      image: "/images/team/lorraine.png",
+      bio: "Lorraine\u2019s passion for accessible tech shines through in her role as CEO of Grandview Children\u2019s Centre, the only children\u2019s treatment centre in Durham Region. She has championed its unprecedented growth and expanded its service offerings.",
+    },
+    {
+      name: "Angelo Del Duca",
+      role: "Advisor",
+      image: "/images/team/angelo.png",
+      bio: "Angelo has extensive experience in the electronics industry and holds an Electrical Engineering degree from the University of Toronto. His experience includes R&D of electronic systems, management and Angel Investment into technology-based companies.",
+    },
+    {
+      name: "Frank Auddino",
+      role: "Advisor",
+      image: "/images/team/frank.png",
+      bio: "Frank is an active angel investor, 2019 NACO award recipient for Outstanding contributions to the Canadian Early Stage Ecosystem, 2018 York Angels of the year, and mentor at the Regional Innovation Hub Spark Centre.",
+    },
+    {
+      name: "Garry Innanen",
+      role: "Advisor",
+      image: "/images/team/garry.png",
+      bio: "Garry has 25 years of corporate governance, sales, marketing, engagement, delivery and leadership experience. He has founded and led four service organizations and is adept at developing actionable business strategies.",
+    },
+    {
+      name: "Harry Direen",
+      role: "Advisor",
+      image: "/images/team/harry.png",
+      bio: "Dr. Harry Direen has over 40 years of experience as an engineer designing, developing, and innovating systems in the electronics and software industry. He received a Ph.D. in Electrical Engineering from the University of Colorado.",
+    },
+  ],
+};
+
+// ── Contact Section ─────────────────────────────
+export const contactContent = {
+  label: "Get In Touch",
+  headline: "Let's Start a Conversation",
+  subheadline:
+    "Whether you're an adaptive driver, a rehab specialist, or a mobility equipment dealer — we'd love to hear from you.",
+  details: {
+    email: "info@axcessiom.ca",
+    location: "Oshawa, Ontario, Canada",
+    social: [
+      { platform: "LinkedIn", href: "https://ca.linkedin.com/company/axcessiom" },
+      { platform: "Twitter", href: "https://x.com/axcessiom" },
+      { platform: "Instagram", href: "https://www.instagram.com/axcessiom/" },
+      { platform: "Facebook", href: "https://www.facebook.com/axcessiom/" },
+    ],
+  },
+  formFields: [
+    { name: "name", label: "Full Name", type: "text", placeholder: "John Doe" },
+    { name: "email", label: "Email Address", type: "email", placeholder: "john@example.com" },
+    {
+      name: "interest",
+      label: "I am a...",
+      type: "select",
+      options: [
+        "Adaptive Driver",
+        "Rehabilitation Specialist",
+        "Mobility Equipment Dealer",
+        "Researcher / Academic",
+        "Investor / Partner",
+        "Other",
+      ],
+    },
+    { name: "message", label: "Message", type: "textarea", placeholder: "Tell us how we can help..." },
+  ],
+};
+
 // ── Footer ──────────────────────────────────────
 export const footerContent = {
   logo: { src: "/logo.png", alt: "Axcessiom" },
@@ -339,10 +425,10 @@ export const footerContent = {
     { label: "Contact", href: "#contact" },
   ],
   companyLinks: [
-    { label: "About Us", href: "#" },
-    { label: "Our Team", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Press", href: "#" },
+    { label: "About Us", href: "#hero" },
+    { label: "Our Team", href: "#team" },
+    { label: "Careers", href: "#contact" },
+    { label: "Press", href: "#awards" },
   ],
   contact: {
     location: "Oshawa, Ontario, Canada",

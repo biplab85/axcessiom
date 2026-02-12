@@ -15,7 +15,7 @@ export default function FinalCTA() {
   return (
     <section
       ref={sectionRef}
-      id="contact"
+      id="cta"
       className="relative py-24 lg:py-32 overflow-hidden"
     >
       <div className="absolute inset-0 bg-dark-50" />
