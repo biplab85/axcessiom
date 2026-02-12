@@ -64,9 +64,6 @@ export default function Team() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-8 text-center lg:text-left">
-              Core Team
-            </h3>
 
             <div className="space-y-6">
               {teamContent.team.map((member) => (
@@ -120,9 +117,6 @@ export default function Team() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-8 text-center lg:text-left">
-              Advisors
-            </h3>
 
             <div className="flex justify-center lg:justify-center">
               <div className="w-[280px] sm:w-[320px]">
