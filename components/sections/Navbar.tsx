@@ -243,35 +243,8 @@ export default function Navbar() {
               })}
             </div>
 
-            {/* Desktop CTA + Contact Drawer Toggle */}
+            {/* Desktop Contact Drawer Toggle */}
             <div className="hidden lg:flex items-center gap-3">
-              <a
-                href={navContent.cta.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(navContent.cta.href);
-                }}
-                className="nav-cta-shimmer group relative inline-flex items-center gap-2 px-5 py-2.5 overflow-hidden rounded-xl font-semibold text-sm text-white transition-all duration-300 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #E8612D 0%, #FF7A45 50%, #E8612D 100%)",
-                  boxShadow:
-                    "0 4px 20px -4px rgba(232,97,45,0.5), 0 0 0 1px rgba(232,97,45,0.2)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 32px -4px rgba(232,97,45,0.6), 0 0 0 1px rgba(232,97,45,0.4)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow =
-                    "0 4px 20px -4px rgba(232,97,45,0.5), 0 0 0 1px rgba(232,97,45,0.2)";
-                }}
-              >
-                <MonitorPlay className="relative z-10 w-4 h-4" />
-                <span className="relative z-10">{navContent.cta.label}</span>
-                <ArrowRight className="relative z-10 w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
-              </a>
-
               {/* Contact Drawer Toggle */}
               <button
                 onClick={() => setIsContactDrawerOpen(true)}
