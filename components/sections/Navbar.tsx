@@ -104,24 +104,6 @@ export default function Navbar() {
 
   return (
     <>
-      <style>{`
-        @keyframes nav-glow-pulse {
-          0%, 100% { opacity: 0.6; }
-          50% { opacity: 1; }
-        }
-        .nav-cta-shimmer::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-          animation: nav-shimmer 3s ease-in-out infinite;
-        }
-        @keyframes nav-shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-      `}</style>
-
       <header
         role="banner"
         className="fixed top-0 left-0 right-0 z-50"
@@ -346,7 +328,7 @@ export default function Navbar() {
 
         {/* Slide-in Panel */}
         <aside
-          className={`absolute top-0 right-0 w-full max-w-sm h-full shadow-2xl transition-transform duration-500 ease-out flex flex-col ${
+          className={`absolute top-0 right-0 w-[85vw] max-w-sm h-full shadow-2xl transition-transform duration-500 ease-out flex flex-col ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{
@@ -567,7 +549,7 @@ export default function Navbar() {
 
         {/* Slide-in Contact Drawer */}
         <aside
-          className={`absolute top-0 right-0 w-full max-w-md h-full shadow-2xl transition-transform duration-500 ease-out flex flex-col ${
+          className={`absolute top-0 right-0 w-[90vw] max-w-md h-full shadow-2xl transition-transform duration-500 ease-out flex flex-col ${
             isContactDrawerOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{

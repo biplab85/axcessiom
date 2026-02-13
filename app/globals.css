@@ -85,6 +85,31 @@
   }
 }
 
+/* ── Swiper Effect Cards (Team Advisors) ── */
+
+.team-cards-swiper {
+  width: 260px;
+  height: auto;
+  overflow: visible;
+}
+.team-cards-swiper .swiper-slide {
+  border-radius: 18px;
+  background: #111;
+  height: auto;
+}
+
+@media (min-width: 640px) {
+  .team-cards-swiper {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-cards-swiper {
+    width: 340px;
+  }
+}
+
 /* ── Keyframe Animations ── */
 
 @keyframes particle-float-1 {
@@ -162,4 +187,24 @@
   50% {
     opacity: 0.3;
   }
+}
+
+/* ── Navbar Animations ── */
+
+@keyframes nav-glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.nav-cta-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: nav-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes nav-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }

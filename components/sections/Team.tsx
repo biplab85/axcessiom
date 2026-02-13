@@ -118,85 +118,71 @@ export default function Team() {
             transition={{ duration: 0.7 }}
           >
 
-            <div className="flex justify-center lg:justify-center">
-              <div className="w-[280px] sm:w-[320px]">
-                <Swiper
-                  effect="cards"
-                  grabCursor={true}
-                  loop={true}
-                  autoplay={{ delay: 2500, disableOnInteraction: false }}
-                  modules={[EffectCards, Autoplay]}
-                  className="team-cards-swiper"
-                >
-                  {teamContent.advisors.map((advisor, i) => {
-                    const accent = cardColors[i % cardColors.length];
-                    return (
-                      <SwiperSlide key={advisor.name}>
+            <div className="flex flex-col items-center">
+              <Swiper
+                effect="cards"
+                grabCursor={true}
+                loop={true}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                modules={[EffectCards, Autoplay]}
+                className="team-cards-swiper"
+              >
+                {teamContent.advisors.map((advisor, i) => {
+                  const accent = cardColors[i % cardColors.length];
+                  return (
+                    <SwiperSlide key={advisor.name}>
+                      <div
+                        className="rounded-2xl p-6 text-center"
+                        style={{
+                          background: `linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)`,
+                          border: `1px solid rgba(255,255,255,0.08)`,
+                          backdropFilter: "blur(12px)",
+                        }}
+                      >
+                        {/* Photo */}
                         <div
-                          className="rounded-2xl p-6 text-center h-full"
-                          style={{
-                            background: `linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)`,
-                            border: `1px solid rgba(255,255,255,0.08)`,
-                            backdropFilter: "blur(12px)",
-                          }}
+                          className="relative mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-2 transition-colors duration-500"
+                          style={{ borderColor: `${accent}40` }}
                         >
-                          {/* Photo */}
-                          <div
-                            className="relative mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-2 transition-colors duration-500"
-                            style={{ borderColor: `${accent}40` }}
-                          >
-                            <Image
-                              src={advisor.image}
-                              alt={advisor.name}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-
-                          {/* Name */}
-                          <h3 className="text-lg font-bold text-white mb-1">
-                            {advisor.name}
-                          </h3>
-
-                          {/* Role */}
-                          <p
-                            className="text-xs font-semibold uppercase tracking-wider mb-4"
-                            style={{ color: accent }}
-                          >
-                            {advisor.role}
-                          </p>
-
-                          {/* Bio */}
-                          <p className="text-xs text-gray-400 leading-relaxed">
-                            {advisor.bio}
-                          </p>
+                          <Image
+                            src={advisor.image}
+                            alt={advisor.name}
+                            fill
+                            className="object-cover"
+                          />
                         </div>
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
 
-                <p className="text-center text-xs text-gray-600 mt-5">
-                  Drag to see more advisors
-                </p>
-              </div>
+                        {/* Name */}
+                        <h3 className="text-lg font-bold text-white mb-1">
+                          {advisor.name}
+                        </h3>
+
+                        {/* Role */}
+                        <p
+                          className="text-xs font-semibold uppercase tracking-wider mb-4"
+                          style={{ color: accent }}
+                        >
+                          {advisor.role}
+                        </p>
+
+                        {/* Bio */}
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                          {advisor.bio}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+
+              <p className="text-xs text-gray-600 mt-8">
+                Swipe or drag to see more advisors
+              </p>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Swiper cards custom styles */}
-      <style jsx global>{`
-        .team-cards-swiper {
-          width: 100%;
-          height: auto;
-          overflow: visible;
-        }
-        .team-cards-swiper .swiper-slide {
-          border-radius: 1rem;
-          background: #111;
-        }
-      `}</style>
     </section>
   );
 }

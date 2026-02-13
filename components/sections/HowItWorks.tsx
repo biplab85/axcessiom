@@ -69,7 +69,7 @@ export default function HowItWorks() {
                   className="text-center iconContainer"
                 >
                   {/* Step circle */}
-                  <div className="relative inline-flex items-center justify-center w-32 h-32 mb-8">
+                  <div className="relative inline-flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-6 md:mb-8">
                     <div
                       className="absolute inset-0 rounded-full"
                       style={{
